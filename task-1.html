@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <main>
+            <header>
+                <span>Запрос по правообладателю</span>
+            </header>
+            <form name="ask" action="#">
+                <section>
+                    <span>Я хочу получить сведения о правах:</span>
+                    <input type="radio" name="information" value="snils" checked> Физического лица по СНИЛС
+                    <input type="radio" name="information" value="rusEntity"> Российского юридического лица
+                    <input type="radio" name="information" value="person"> Физического лица по ФИО
+                    <input type="radio" name="information" value="forEntity"> Иностранного юридического лица
+                    <input type="radio" name="information" value="subject"> Субъекта публичного права
+                </section>
+                <section>
+                    <input type="text" placeholder="Фамилия" name="lastName">
+                    <input type="text" placeholder="Имя" name="firstName">
+                    <input type="text" placeholder="Отчество" name="addNAme">
+                    <hr>
+                    <select name="document">
+                        <option>Паспорт гражданина Росиийской Федерации</option>
+                        <option>Еще что-то</option>
+                    </select>
+                    <input type="text" name="docSeries" placeholder="Серия">
+                    <input type="text" name="docNumber" placeholder="Номер">
+                    <input type="text" name="docIssued" placeholder="Кем выдан документ, удостоверяющий личность">
+                    <input type="date" name="docDate" placeholder="Дата выдачи">
+                    <hr>
+                    <textarea placeholder="Основания запроса сведений"></textarea>
+                </section>
+            </form>
+            <footer>
+                <button type="submit" form="ask"></button>
+            </footer>
+        </main>
+    </body>
+</html>
