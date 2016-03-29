@@ -9,28 +9,31 @@ header {
     line-height: 100%;
     border-bottom: 2px solid #ceccce;
     padding: 15px 10px 15px 15px;
+    background: linear-gradient(to bottom, #fffeff, #e4e2e4); 
     
 }
 
 #headerName {
     position: relative;
+    font-size: 13pt;
+    font-weight: bold;
 }
 
 #headerName::before {
     display: inline;
     content: "";
-    background-color: red;
+    background-color: #ba2c4c;
     position: absolute;
-    width: 0.5em;
-    height: 1em;
+    width: 5px;
+    height: 15px;
     left: -15px;
 }
 
 .queryType {
+    font-weight: bold;
+    font-size: 10pt;
     background-color: #efedef;
     padding: 15px;
-    height: 90px;
-    
     border-bottom: 2px solid #ceccce;
 }
 
@@ -38,15 +41,12 @@ header {
     margin: 3px;
     display: inline-block;
     width: 280px;
+    font-weight: normal;
 }
 
-.queryType li:last-of-type {
-    margin-bottom: 15px;
-}
 
 .mainInfo {
     background-color: #f7f5f7;
-    height: 400px;
     padding: 20px;
     border-bottom: 2px solid #ceccce;
 }
@@ -56,15 +56,14 @@ header {
     border-bottom: 2px solid #ceccce;
 }
 
-#nameInfo li {
-    
-}
 
 #addNameHint {
     display: inline-block;
-    font-size: 12px;
-    width: 300px;
+    font-size: 10px;
+    width: 350px;
     vertical-align: middle;
+    color: gray;
+    font-style: italic;
     
 }
 
@@ -76,12 +75,12 @@ header {
 #docSwitch {
     margin: 20px 10px 10px 0px;
     width: 660px;
+    padding: 2px;
 }
 
 .documentInfo {
     margin: 5px 0px;
     width: 680px;
-    
 }
 
 .documentInfo  li {
@@ -94,10 +93,11 @@ header {
     width: 65px;
     margin-right: 5px;
     margin-bottom: 10px;
+    padding: 3px;
 }
 
 .documentInfo li:nth-child(3) input {
-    width: 503px;
+    width: 485px;
 }
 
 .documentInfo li:nth-child(4) input {
@@ -113,6 +113,8 @@ header {
     margin-top: 15px;
     width: 660px;
     height: 160px;
+    resize: none;
+    padding: 5px;
 }
 
 footer {
@@ -129,14 +131,26 @@ footer {
     background-color: #f5f3f5;
     display: inline;
     height: 30px;
+    border-radius: 7px;
+    background: linear-gradient(to bottom, #fffeff, #f5f3f5); 
+    box-shadow: inset 0 0 0.3em #adabad;
+}
+
+button:focus {
+    outline: none;
 }
 
 
 
 
+input {
+    border-radius: 3px;
+}
 
-
-
+select {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
 
 :-moz-placeholder {
     font-style: italic;
@@ -190,9 +204,11 @@ ul {
     padding: 1px 6px;
     position: relative;
     background-color: white;
-    border: 2px solid green;
+    border: 2px solid #f0caa1;
     margin-left: 10px;
     vertical-align: middle;
+    background: linear-gradient(to bottom, #f3eee5, #f6f8ed);
+    box-shadow: inset 0 0 0.1em yellow;
 }
 
 .documentInfo .hint {
@@ -203,14 +219,14 @@ ul {
     content: "";
     position: absolute;
     border: 5px solid transparent;
-    border-right-color: green;
+    border-right-color: #f0caa1;
     left: -11px;
     top: 25%;
 }
 
 .hint::after {
     left: -8px;
-    border-right-color: white;
+    border-right-color: #f4f3e9;
 }
 
 .alert:hover + .hint{
