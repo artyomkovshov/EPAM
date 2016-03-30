@@ -39,17 +39,17 @@
                 <section class="mainInfo">
                     <ul id="nameInfo">
                         <li>
-                            <input type="text" placeholder="Фамилия" name="lastName" required pattern="[А-Яа-яЁё]">
+                            <input type="text" placeholder="Фамилия" name="lastName" required pattern="^[А-Яа-яЁё\s]+$">
                             <div class="alert"></div>
                             <span class="hint">Поле обязательно для заполнения (пример: "Иванов")</span>
                         </li>
                         <li>
-                            <input type="text" placeholder="Имя" name="firstName" required pattern="[А-Яа-яЁё]">
+                            <input type="text" placeholder="Имя" name="firstName" required pattern="^[А-Яа-яЁё\s]+$">
                             <div class="alert"></div>
                             <span class="hint">Поле обязательно для заполнения (пример: "Иван")</span>
                         </li>
                         <li>
-                            <input type="text" placeholder="Отчество" name="addNAme" pattern="[А-Яа-яЁё]">
+                            <input type="text" placeholder="Отчество" name="addNAme" pattern="^[А-Яа-яЁё\s]+$">
                             <span id="addNameHint">Отчество необходимо указывать, если оно есть в документе, удостоверяющем личность</span>
                         </li>
                     </ul>
@@ -69,7 +69,7 @@
                             <span class="hint">Поле обязательно для заполнения (пример: "523620")</span>
                         </li>
                         <li>
-                            <input type="text" name="docIssued" placeholder="Кем выдан документ, удостоверяющий личность" required pattern="[А-Яа-яЁё]">
+                            <input type="text" name="docIssued" placeholder="Кем выдан документ, удостоверяющий личность" required pattern="^[А-Яа-яЁё\s]+$">
                             <div class="alert"></div>
                             <span class="hint">Поле обязательно для заполнения (пример: "УФМС России по Рязанской области")</span>
                         </li>
