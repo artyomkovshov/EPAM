@@ -1,3 +1,7 @@
+body {
+    width: 700px;
+}
+
 main {
     width: 700px;
     border: 2px solid #ceccce;
@@ -56,6 +60,9 @@ header {
     border-bottom: 2px solid #ceccce;
 }
 
+input[type="text"] {
+    padding: 3px;
+}
 
 #addNameHint {
     display: inline-block;
@@ -76,6 +83,7 @@ header {
     margin: 20px 10px 10px 0px;
     width: 660px;
     padding: 2px;
+    background-position: 290px -145px;
 }
 
 .documentInfo {
@@ -93,7 +101,6 @@ header {
     width: 65px;
     margin-right: 5px;
     margin-bottom: 10px;
-    padding: 3px;
 }
 
 .documentInfo li:nth-child(3) input {
@@ -101,7 +108,15 @@ header {
 }
 
 .documentInfo li:nth-child(4) input {
-    width: 120px;
+    width: 150px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: none;
+    line-height: 18px;
+}
+
+.documentInfo li:nth-child(4) .alert {
+    margin-left: -50px;
 }
 
 .textDiv {
@@ -115,6 +130,7 @@ header {
     height: 160px;
     resize: none;
     padding: 5px;
+    overflow: hidden;
 }
 
 footer {
@@ -142,9 +158,10 @@ button:focus {
 
 
 
-
 input {
-    border-radius: 3px;
+    outline: 0;
+    border: 1px solid #d6d4d6;
+    border-radius: 4px;
 }
 
 select {
@@ -179,8 +196,10 @@ input:focus::-webkit-input-placeholder {
 }
 
 
+
 input:focus {
     outline: none;
+    
 }
 
 ul {
@@ -190,17 +209,13 @@ ul {
     padding: 0;
 }
 
-
-
-
 .hint {
     font-size: 9pt;
     color: gray;
     line-height: 14pt;
     display: none;
     box-sizing: border-box;
-    width: 215px;
-    height: 25px;
+
     padding: 1px 6px;
     position: relative;
     background-color: white;
@@ -234,3 +249,26 @@ ul {
     display: inline-block;
 }
 
+#date {
+    background-image: url(http://image005.flaticon.com/42/svg/54/54247.svg); 
+    background-size:18px;
+    background-position: center;
+    background-repeat: no-repeat; 
+    box-sizing: content-box;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    vertical-align: bottom;
+    margin-bottom: 10px;
+    display: inline-block;
+    content: "";
+    border: 1px solid #d6d4d6;
+    background-color: #f3f1f3;
+    padding: 12px 0px;
+    width: 28px;
+    border-left: none;
+    margin-left: -10px;
+}
+
+.documentInfo li:nth-child(4) {
+    line-height: 18px;
+}
