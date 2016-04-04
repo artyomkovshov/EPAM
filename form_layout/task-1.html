@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="task-1.css">
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Запрос по правообладателю</h1>
+            </header>
+            <form action="http://httpbin.org/get" method="get">
+                <section class="queryType">
+                    <span>Я хочу получить сведения о правах:</span>
+                    <ul>
+                        <li>
+                            <input type="radio" name="information" value="snils" checked id="radio1">
+                            <label for="radio1">Физического лица по СНИЛС</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="information" value="rusEntity" id="radio2"> 
+                            <label for="radio2">Российского юридического лица</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="information" value="person" id="radio3"> 
+                            <label for="radio3">Физического лица по ФИО</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="information" value="forEntity" id="radio4">
+                            <label for="radio4">Иностранного юридического лица</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="information" value="subject" id="radio5"> 
+                            <label for="radio5">Субъекта публичного права</label>
+                        </li>
+                    </ul>
+                </section>
+                <section class="mainInfo">
+                    <ul id="nameInfo">
+                        <li>
+                            <label for="lastNameField" class="hidden">Фамилия</label>
+                            <input id="lastNameField" type="text" placeholder="Фамилия" name="lastName" required pattern="^[А-Яа-яЁё\s]+$">
+                            <div class="alert"></div>
+                            <span class="hint">Поле обязательно для заполнения (пример: "Иванов")</span>
+                        </li>
+                        <li>
+                            <label for="firstNameField" class="hidden">Имя</label>
+                            <input id="firstNameField" type="text" placeholder="Имя" name="firstName" required pattern="^[А-Яа-яЁё\s]+$">
+                            <div class="alert"></div>
+                            <span class="hint">Поле обязательно для заполнения (пример: "Иван")</span>
+                        </li>
+                        <li>
+                            <label for="addNameField" class="hidden">Отчество</label>                            
+                            <input id="addNameField" type="text" placeholder="Отчество" name="addName" pattern="^[А-Яа-яЁё\s]+$">
+                            <span id="addNameHint">Отчество необходимо указывать, если оно есть в документе, удостоверяющем личность</span>
+                        </li>
+                    </ul>
+                    <label for="docSwitch" class="hidden">Выберите документ из выпадающего списка</label>
+                    <select id="docSwitch" name="document">
+                        <option>Паспорт гражданина Росcийской Федерации</option>
+                        <option>Еще что-то</option>
+                    </select>
+                    <ul class="documentInfo">
+                        <li>
+                            <label for="seriesField" class="hidden">Серия паспорта</label>  
+                            <input id="seriesField" type="text" name="docSeries" placeholder="Серия" required pattern="[0-9]{4}">
+                            <div class="alert"></div>
+                            <span class="hint">Поле обязательно для заполнения (пример: "6108")</span>
+                        </li>
+                        <li>
+                            <label for="numberField" class="hidden">Номер паспорта</label>
+                            <input id="numberField" type="text" name="docNumber" placeholder="Номер" required pattern="[0-9]{6}">
+                            <div class="alert"></div>
+                            <span class="hint">Поле обязательно для заполнения (пример: "523620")</span>
+                        </li>
+                        <li>
+                            <label for="issuedField" class="hidden">Кем выдан паспорт</label>
+                            <input id="issuedField" type="text" name="docIssued" placeholder="Кем выдан документ, удостоверяющий личность" required pattern="^[А-Яа-яЁё\s]+$">
+                            <div class="alert"></div>
+                            <span class="hint">Поле обязательно для заполнения (пример: "УФМС России по Рязанской области")</span>
+                        </li>
+                        <li>
+                            <label for="dateField" class="hidden">Дата выдачи паспорта</label>
+                            <input id="dateField" type="text" name="docDate" placeholder="Дата выдачи" required>
+                            <button type="button" id="date"></button>
+                            <div class="alert"></div>
+                            <span class="hint">Поле обязательно для заполнения</span>
+                        </li>
+                    </ul>
+                    <div class="textDiv">
+                        <label for="textField" class="hidden">Введите основание запроса сведений</label>
+                        <textarea id="textField" class="text" placeholder="Основания запроса сведений"></textarea>
+                    </div>
+                </section>
+                <section id="buttonField">
+                    <button id="submitButton" type="submit">Отправить запрос</button>
+                </section>
+            </form>
+        </main>
+    </body>
+</html>
