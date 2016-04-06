@@ -117,6 +117,7 @@ input[type="text"] {
 
 .documentInfo li:nth-child(4) .alert {
     margin-left: -50px;
+    opacity: 1;
 }
 
 .textDiv {
@@ -247,6 +248,10 @@ ul {
 .alert:hover + .hint{
     
     display: inline-block;
+}
+
+#dateContainer {
+    display: inline-flex;
 }
 
 #date {
