@@ -63,13 +63,14 @@ header {
     font-size: 42px;
     letter-spacing: 5px;
     font-weight: bold;
-    padding: 20px 0px;
+    padding: 10px 0px;
     width: 100%;
     color: #6b9ad0;
 }
 
 nav {
     font-family: PT Sans Narrow;
+    font-size: 18px;
     font-size: 18px;
     letter-spacing: 1px;
     width: 100%;
@@ -110,7 +111,7 @@ nav li:nth-child(3)::after {
 }
 
 main {
-    width: 50%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 30px;
@@ -118,7 +119,7 @@ main {
 }
 
 .blogPosts {
-    width: 65%;
+    width: 70%;
     float: left;
 
 }
@@ -129,12 +130,13 @@ main {
 }
 
 aside {
-    width: 30%;
+    width: 25%;
     float: right;
 }
 
 #menu {
-    width: 40%;
+    text-align: center;
+    width: 60%;
     margin: 0 auto 0 auto;
 }
 
@@ -142,7 +144,7 @@ aside {
     display: inline-block;
     list-style: none;
     text-transform: uppercase;
-    padding: 15px 25px;
+    padding: 15px 40px;
     margin: 0px -4px 0px 0px;
 }
 
@@ -171,7 +173,7 @@ article {
     padding: 15px 0px;
     margin: 15px 0px;
     border: 2px solid;
-    border-color: black transparent;
+    border-color: #e3e3e3 transparent;
 }
 
 .postMenu ul {
@@ -291,9 +293,155 @@ li {
 
 .icon {
   width: 1em; height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
 }
 
-.raccoon {    
+
+
+.postIcons li {
+    display: inline-block;
+    color: #eff4f8;
+    background: #cdd4de;
+    border: 1px solid white;
+    border-radius: 6px;
+    width: 40px;
+    padding: 5px;
+    margin-top: -10px;
+    text-align: right;
+}
+
+#spinner1 {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ff00ff;
+    background: linear-gradient(to right, #97acc1 -10%, rgba(151,172,193, 0) 42%);
+    position: relative;
+    animation: rotate 0.8s infinite linear;
+}
+
+#spinner1::before {
+    width: 50%;
+    height: 50%;
+    background: #97acc1;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top 0;
+    left 0;
+    content: "";
+}
+
+#spinner1::after {
+    width: 75%;
+    height: 75%;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    content: "";
+    
+}
+
+#spinner2 {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ff00ff;
+    background: linear-gradient(to left, #97acc1 -10%, rgba(151,172,193, 0) 32%);
+    position: relative;
+    margin-left: -54px;
+    animation: rotate 0.8s infinite linear;
+}
+
+#spinner2::before {
+    width: 50%;
+    height: 50%;
+    background: #97acc1;
+    position: absolute;
+    bottom:  0;
+    border-bottom-right-radius: 100%;
+    right: 0;
+    content: "";
+}
+
+#spinner2::after {
+    width: 75%;
+    height: 75%;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    content: "";
+}
+
+
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(360deg);
+    }
+}
+
+#spinnerContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 54px;
+}
+
+
+.headlogo {
+    width: 80px;
+}
+
+
+.headLogoContainer {
+    letter-spacing: 0.4em;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.headLogoContainer::before {
+    top: 25%;
+    right: 100%;
+    position: absolute;
+    content: "RACCO";
+}
+
+.headLogoContainer::after {
+    margin-left: 0.4em;
+    top: 25%;
+    left: 100%;
+    position: absolute;
+    content: "NBLOG";
+}
+
+.sidelogo {
+    width: 1em;
+}
+
+.sideLogoContainer {
+    position: relative;
+    top: 0.1em;
+    margin: 0;
+    padding: 0;
+    float: left;
+    margin-right: 5px;
 }
